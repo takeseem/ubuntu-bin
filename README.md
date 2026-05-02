@@ -1,2 +1,5 @@
 # ubuntu-bin
-ubuntu下的一些脚本
+
+bash script for ubuntu.
+
+- [app-ext.sh](): AppImage Unpacker & System Integrator. Usage: `./app-ext.sh <YourApp.AppImage>`
