@@ -52,6 +52,7 @@ ORIG_DESKTOP=$(ls "$SQUASH_DIR"/*.desktop | head -n 1)
 [[ -z "$ORIG_DESKTOP" ]] && error "No .desktop file found in AppImage."
 
 DESKTOP_FILE=$(basename "$ORIG_DESKTOP")
+[[ "$DESKTOP_FILE" == @* ]] && DESKTOP_FILE="${DESKTOP_FILE#@}"
 LOCAL_DESKTOP="$BASE_DIR/$DESKTOP_FILE"
 
 log "Configuring desktop file: ${GREEN}$DESKTOP_FILE${NC}"
